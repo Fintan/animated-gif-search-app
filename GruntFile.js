@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
     // load all grunt tasks
     require('matchdep').filterDev('grunt-contrib-*').forEach(grunt.loadNpmTasks);
-    grunt.loadNpmTasks('grunt-connect-proxy');
 
     var _ = grunt.util._;
 
@@ -213,83 +212,14 @@ module.exports = function (grunt) {
                   base: 'dist',
                   logger: 'dev',
                   keepalive: true,
-                  hostname: 'localhost',
-                  middleware: function (connect, options) {
-                    var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
-                    console.log('options.base', options.base);
-                    return [
-                        // Include the proxy first
-                        proxy,
-                        // Serve static files.
-                        connect.static(options.base[0]),
-                        // Make empty directories browsable.
-                        connect.directory(options.base[0])
-                    ];
-
-                    // var middlewares = [];
-           
-                    // if (!Array.isArray(options.base)) {
-                    //   options.base = [options.base];
-                    // }
-                       
-                    // // Setup the proxy
-                    // middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
-             
-                    // // Serve static files
-                    // options.base.forEach(function(base) {
-                    //   middlewares.push(connect.static(base));
-                    // });
-             
-                    // return middlewares;
-                  }
-                },
-                proxies: [ 
-                    {
-                        context: '/media',
-                        host: 'media0.giphy.com',
-                        port: 80,
-                        // port: 8080,
-                        //https: false,
-                        //xforward: false//,
-                        headers: {
-                            "Access-Control-Allow-Origin": "*"
-                        }
-                        // rewrite: {
-                        //     // the key '^/api' is a regex for the path to be rewritten
-                        //     // the value is the context of the data service
-                        //     '^/api': '/data-service-path'
-                        // }
-                    },
-                    {
-                        context: '/media',
-                        // host: 'media1.giphy.com',
-                        host: '54.230.30.16',
-                        port: 80,
-                        // port: 8080,
-                        //https: false,
-                        //xforward: false//,
-                        headers: {
-                            //"Access-Control-Allow-Origin": "*",
-                            "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-                            "Accept-Encoding":"gzip,deflate,sdch",
-                            "Accept-Language":"en-US,en;q=0.8",
-                            "Cache-Control":"no-cache",
-                            "Connection":"keep-alive"
-                        }
-                        // rewrite: {
-                        //     // the key '^/api' is a regex for the path to be rewritten
-                        //     // the value is the context of the data service
-                        //     '^/api': '/data-service-path'
-                        // }
-                    }
-                ]
+                  hostname: 'localhost'
+                }
             }
         }
     });
     
     grunt.registerTask('server', function (target) {
         grunt.task.run([
-            'configureProxies:server',
             'connect:server'
             //'open'
         ]);
