@@ -10,7 +10,6 @@ require.config({
 		'backbone.stickit': '../bower_components/backbone.stickit/backbone.stickit',
 		'backbone-deep-model': '../bower_components/backbone-deep-model/distribution/deep-model',
 		bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
-		gritter: '../bower_components/gritter/js/jquery.gritter',
 		handlebars: '../bower_components/handlebars/handlebars-1.0.12',
 		domReady: '../bower_components/requirejs-domready/domReady'
 	},
@@ -41,10 +40,7 @@ require.config({
 			deps:[ "handlebars", "utils/handlebarhelpers"],
 			exports: "JST"
 		},
-		bootstrap:["jquery"],
-		createjs: {
-			exports: 'createjs'
-		}
+		bootstrap:["jquery"]
 	},
 
 	packages: [
