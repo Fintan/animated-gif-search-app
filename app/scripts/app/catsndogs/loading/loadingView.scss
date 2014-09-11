@@ -1,0 +1,25 @@
+.loading-view {
+
+	.preloader {
+
+		display: none;
+		&.loading {
+			display: block;
+			position: absolute;
+			top: 40%;
+			font-size: 60px;
+			width: 100%;
+			text-align: center;
+			color: #DDD;
+			span {
+				left: 0;
+				width: 100%;
+				// @include prefixer(animation, spinning 1.5s infinite, webkit moz ms o spec);
+				// @include prefixer(animation-timing-function, linear, webkit moz ms o spec);
+				// @include prefixer(transform-origin, 50% 58%, webkit moz ms o spec);
+			}
+
+		}
+	}
+	
+}

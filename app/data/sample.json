@@ -1,0 +1,72 @@
+{
+    "data": [
+        {
+            "type": "gif",
+            "id": "slNwi1TTwR40U",
+            "url": "http://giphy.com/gifs/ticklin-ivories-slNwi1TTwR40U",
+            "bitly_gif_url": "http://gph.is/1tByzZp",
+            "bitly_url": "http://gph.is/1tByzZp",
+            "embed_url": "http://giphy.com/embed/slNwi1TTwR40U",
+            "username": "",
+            "source": "http://www.reddit.com/r/gifs/comments/273ydw/ticklin_the_ivories/",
+            "rating": "",
+            "trending_datetime": "2014-06-02 14:56:53",
+            "images": {
+                "fixed_height": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200.gif",
+                    "width": "356",
+                    "height": "200",
+                    "mp4": "http://media.giphy.com/media/slNwi1TTwR40U/200.mp4"
+                },
+                "fixed_height_still": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200_s.gif",
+                    "width": "356",
+                    "height": "200"
+                },
+                "fixed_height_downsampled": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200_d.gif",
+                    "width": "356",
+                    "height": "200"
+                },
+                "fixed_width": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200w.gif",
+                    "width": "200",
+                    "height": "112",
+                    "mp4": "http://media.giphy.com/media/slNwi1TTwR40U/200w.mp4"
+                },
+                "fixed_width_still": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200w_s.gif",
+                    "width": "200",
+                    "height": "112"
+                },
+                "fixed_width_downsampled": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/200w_d.gif",
+                    "width": "200",
+                    "height": "112"
+                },
+                "original": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/giphy.gif",
+                    "width": "500",
+                    "height": "281",
+                    "size": "2033374",
+                    "frames": "27",
+                    "mp4": "http://media.giphy.com/media/slNwi1TTwR40U/giphy.mp4"
+                },
+                "original_still": {
+                    "url": "http://media1.giphy.com/media/slNwi1TTwR40U/giphy_s.gif",
+                    "width": "500",
+                    "height": "281"
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "total_count": 11034,
+        "count": 1,
+        "offset": 0
+    },
+    "meta": {
+        "status": 200,
+        "msg": "OK"
+    }
+}

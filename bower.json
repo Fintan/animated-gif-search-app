@@ -1,0 +1,27 @@
+{
+  "name": "webapp",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs": "~2.1.4",
+    "jquery": "~1.9.1",
+    "backbone": "~1.0.0",
+    "underscore": "~1.5.2",
+    "marionette": "~1.1.0",
+    "backbone.babysitter": "~0.0.6",
+    "backbone.wreqr": "~0.2.0",
+    "handlebars": "~1.0.0",
+    "bootstrap": "2.3.2",
+    "backbone.stickit": "~0.6.3",
+    "requirejs-domready": "~2.0.1",
+    "requirejs-i18n": "~2.0.4",
+    "backbone-deep-model": "~0.10.4",
+    "requirejs-plugins": "~1.0.2"
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "bootstrap": "~3.2.0",
+    "marionette": "~2.2.0",
+    "backbone.babysitter": "^0.1.0",
+    "backbone.wreqr": "^1.0.0"
+  }
+}

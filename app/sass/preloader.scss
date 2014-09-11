@@ -1,0 +1,85 @@
+#overlay {
+	background: $overlay-color;
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+
+	ul {
+		padding: 0; 
+		margin: 300px auto 0;
+		list-style: none;
+		text-align: center;
+		display: block;
+
+		li {
+			width: 10px;
+			height: 10px;
+			background-color: white;
+			box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+			display: inline-block;
+			border-radius: 50%;
+			margin: 0 4px;
+			@include animation(2.5s);
+			@include animationFillMode(both);
+			@include animationTimingFunction();
+
+		}
+		:nth-child(6) {
+			@include animationDelay(0.1s);
+		}
+		:nth-child(5) {
+			@include animationDelay(0.25s);
+		}
+		:nth-child(4) {
+			@include animationDelay(0.5s);
+		}
+		:nth-child(3) {
+			@include animationDelay(0.75s);
+		}
+		:nth-child(2) {
+			@include animationDelay(1s);
+		}
+		:nth-child(1) {
+			@include animationDelay(1.25s);
+		}
+	}
+
+}
+
+@-webkit-keyframes loading {
+	0% {-webkit-transform: translateX(-30px); opacity: 0}
+	25% {opacity: 1}
+	50% {-webkit-transform: translateX(30px); opacity: 0}
+	100% {opacity: 0}
+}
+
+@-moz-keyframes loading {
+	0% {-moz-transform: translateX(-30px); opacity: 0}
+	25% {opacity: 1}
+	50% {-moz-transform: translateX(30px); opacity: 0}
+	100% {opacity: 0}
+}
+
+@-o-keyframes loading {
+	0% {-o-transform: translateX(-30px); opacity: 0}
+	25% {opacity: 1}
+	50% {-o-transform: translateX(30px); opacity: 0}
+	100% {opacity: 0}
+}
+
+@-ms-keyframes loading {
+	0% {-ms-transform: translateX(-30px); opacity: 0}
+	25% {opacity: 1}
+	50% {-ms-transform: translateX(30px); opacity: 0}
+	100% {opacity: 0}
+}
+
+@keyframes loading {
+	0% {-ms-transform: translateX(-30px); opacity: 0}
+	25% {opacity: 1}
+	50% {-ms-transform: translateX(30px); opacity: 0}
+	100% {opacity: 0}
+}

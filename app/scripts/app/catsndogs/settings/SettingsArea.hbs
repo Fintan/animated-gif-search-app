@@ -1,0 +1,37 @@
+<div class="row">
+	<div class="search-filter-area col-md-offset-2 col-md-8 col-sm-12">
+		<div class="btn-group btn-group-justified /*col-md-offset-3 col-md-6 col-sm-6*/">
+			<div class="btn-group">
+				<button type="button" class="filterBtn btn btn-default" data-filter="cats">Cats</button>
+			</div>
+			<div class="btn-group">
+				<button type="button" class="filterBtn btn btn-default" data-filter="dogs">Dogs</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4 col-sm-6">
+		<div id="limitCombo" class="stickit-combo select btn-group" data-resize="auto">
+			<button data-toggle="dropdown" class="btn dropdown-toggle">
+				<span id='selectedLimit' class="dropdown-label"></span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li data-value="5"><a>5</a></li>
+				<li data-value="10"><a>10</a></li>
+				<li data-value="25" data-selected="true"><a>25</a></li>
+				<li data-value="50"><a>50</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-8 col-sm-6">
+		<div id="offsetControls" class="pagination-right">
+			<span id="pageNumber"></span>
+			<button data-nav="first" class="first stickit-enabler btn"><i class="fa fa-fast-backward"></i></button>
+			<button data-nav="back" class="previous stickit-enabler btn"><i class="fa fa-step-backward"></i></button>
+			<button data-nav="forward" class="next stickit-enabler btn"><i class="fa fa-step-forward"></i></button>
+			<button data-nav="last" class="last stickit-enabler btn"><i class="fa fa-fast-forward"></i></button>
+		</div>
+	</div>
+</div>

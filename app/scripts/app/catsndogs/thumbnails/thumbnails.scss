@@ -1,0 +1,87 @@
+.thumbnails-view {
+
+	iframe {
+		pointer-events: none;//ftw!
+		overflow: hidden;
+	}
+
+	text-align: center;
+
+	li.hidden{
+		a {
+			img {
+				opacity:0;
+			}
+		}
+	}
+
+	li {
+		cursor: pointer; 
+		cursor: hand;
+
+	 	transition: all 0.7s ease-in;
+	 	a {
+	 		background: #fff;
+	 		padding: 10px 10px 15px;
+			text-align: center;
+
+			background-image: url(../img/thumb-loader.gif);
+			background-position: 50%;
+			background-repeat: no-repeat;
+
+			img {
+				transition: opacity 0.2s ease-in;
+				opacity:1;
+				margin-bottom: 12px;
+
+			}
+
+			&.Folder {
+				-webkit-transform: none;
+  				-moz-transform: none;
+				top: 0px;
+			}
+
+			&.active {
+				border-color: aqua;
+			}
+			&.active.focused {
+				border-color: aquamarine;
+			}
+
+			&:after {
+			  content: attr(title);
+			}
+
+		 	/* Scale the images on hover, add transitions for smoothing things out, and ensure the hover appears on top */
+			&:hover {
+			  -webkit-transform: scale(1.25);
+			  -moz-transform: scale(1.25);
+			  position: relative;
+			  z-index: 5;
+			}
+			
+			/* Add drop shadows and smooth out the transition (Safari only) */
+			& {
+			  -webkit-transition: -webkit-transform .15s linear;
+			  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+			}
+			 
+			/* On hover, darken the shadows a bit */
+			&:hover {
+			  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+			  -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+			}
+
+	 	}
+			
+	}
+
+	.thumb-cover {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: #ee00ff;
+	}
+}
