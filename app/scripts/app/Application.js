@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
-    'use strict';
-    var $ = require('jquery');
-    var _ = require('underscore');
+	'use strict';
+	var $ = require('jquery');
+	var _ = require('underscore');
 	var Marionette = require('marionette');
 	var Backbone = require('backbone');
 	var Router = require('./Router');
