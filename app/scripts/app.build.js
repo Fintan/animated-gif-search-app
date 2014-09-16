@@ -9,8 +9,9 @@ require.config({
 		'backbone.wreqr': '../bower_components/backbone.wreqr/lib/backbone.wreqr',
 		'backbone.stickit': '../bower_components/backbone.stickit/backbone.stickit',
 		'backbone-deep-model': '../bower_components/backbone-deep-model/distribution/deep-model',
-		bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
-		handlebars: '../bower_components/handlebars/handlebars-1.0.12',
+		//bootstrap: '../bower_components/bootstrap/dist/js/bootstrap',
+		//handlebars: '../bower_components/handlebars/handlebars-1.0.12',
+		handlebars: 'vendor/handlebars.runtime',
 		domReady: '../bower_components/requirejs-domready/domReady'
 	},
 
@@ -39,8 +40,8 @@ require.config({
 		jst: {
 			deps:[ "handlebars", "utils/handlebarhelpers"],
 			exports: "JST"
-		},
-		bootstrap:["jquery"]
+		}//,
+		//bootstrap:["jquery"]
 	},
 
 	packages: [

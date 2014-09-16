@@ -7,7 +7,7 @@ define(function (require) {
 	var ThumbnailView = require('./ThumbnailView');
 	var EmptyView = require('./EmptyView');
 	
-	var ThumbnailsView = Backbone.Marionette.CollectionView.extend({
+	return Backbone.Marionette.CollectionView.extend({
 
 		className: 'thumbnails-view',
 
@@ -15,24 +15,8 @@ define(function (require) {
 
 		itemView: ThumbnailView,
 
-		emptyView: EmptyView,
-
-		initialize: function() {
-			
-		},
-
-
-		onBeforeRender: function() {
-
-		// 	thumbnail.$el.removeClass('hide');
-		},
-
-		onClose: function() {
-			
-		}
+		emptyView: EmptyView
 
 	});
-	
-	return ThumbnailsView;
 });
 		

@@ -241,23 +241,16 @@ module.exports = function (grunt) {
 
     deployTasks.splice(4,0, 'service_context', 'requirejs:deploy', 'concat:deploy');
     debugTasks.splice(4,0, 'service_context', 'requirejs:debug', 'concat:deploy');
-    debugMockTasks.splice(4,0, 'service_context:mock', 'requirejs:debug', 'concat:deploy');
     buildTasks.splice(4,0, 'service_context', 'copy:bower_libs', 'copy:amd_not_compiled', 'copy:require_to_dist', 'concat:amd_not_compiled');
-    uiTasks.splice(4,0, 'service_context:mock', 'requirejs:ui_harness', 'concat:ui_harness');
 
     //full build, optimised and uglified
     grunt.registerTask('deploy',  deployTasks);
     //full build, optimised and with source mapping
     grunt.registerTask('debug',  debugTasks);
-    //same as debug but using mock services
-    grunt.registerTask('debugmock',  debugMockTasks);
     //full build, non-optimised (AMDs not combined)
     grunt.registerTask('build', buildTasks);
 
     grunt.registerTask('test', ['connect:server', 'jasmine']);
-
-    grunt.registerTask('ui',  uiTasks);
-
 
     //plato -r -d report -x .json -l jshintrc app/scripts/app/
 };

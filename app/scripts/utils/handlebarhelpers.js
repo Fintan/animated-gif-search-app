@@ -1,37 +1,6 @@
-//define(["handlebars", 'jst'], function(Handlebars, JST) {
 define(function(require) {
 	'use strict';
 	var Handlebars = require('handlebars');
-
-	Handlebars.registerHelper('proxyUrl', function(url) {
-
-		//http://media3.giphy.com/media/5o4RxlUcpjGXm/200w_s.gif
-		return url.split('media0.giphy.com').join('localhost/prox');
-
-	});
-
-	/*Handlebars.registerHelper('dynamictemplate', function (template, context, opts) {
-		template = template.replace(/\//g, '_');
-		var f = Handlebars.partials[template];
-		if (!f) {
-			return "Partial not loaded";
-		}
-
-		return new Handlebars.SafeString(f(context));
-	});*/
-
-	Handlebars.registerHelper('arrToString', function(context, options) {
-
-		return context.toString();
-
-	});
-
-	Handlebars.registerHelper('pop_audit_type', function(context, options) {
-
-		// expecting something like http://www.daon.com/ws/cloudvault/GetVaultDetails
-		return context.split("/").pop();
-
-	});
 
 	/**
 	 * Handlebars Helpers - Dan Harper (http://github.com/danharper)
@@ -82,92 +51,6 @@ define(function(require) {
 		}
 		return options.inverse(this);
 	});
-
-	Handlebars.registerHelper('arrLen', function(arr, options) {
-
-		return arr.length;
-
-	});
-
-	Handlebars.registerHelper('selectUser', function(usrs, options) {
-
-		var out = "";
-		var totalUsers = usrs.length;
-
-		for (var i = 0; i < totalUsers; i++) {
-
-			var usr = usrs[i];
-
-			if(i !== 0)	{
-				out = out + '<option value="'+ usr.userId	+'">';
-			}else {
-				out = out + '<option value="'+ usr.userId +'" selected="selected">';
-			}
-
-			out = out + usr.alias+ " ("+usr.role+")";
-			out = out + '</option>\n';
-
-		}
-
-		return new Handlebars.SafeString(out);
-
-	});
-
-	Handlebars.registerHelper('selectVaultSize', function(size, options) {
-
-		var out = "";
-
-		for (var i = 1; i < 6; i++) {
-
-			if((i + " GB") !== size)	{
-				out = out + '<option value="'+ i +'">';
-			}else {
-				out = out + '<option value="'+ i +'" selected="selected">';
-			}
-
-			out = out + i + " GB";
-			out = out + '</option>\n';
-
-		}
-
-		return new Handlebars.SafeString(out);
-
-	});
-
-
-	Handlebars.registerHelper('addIcon', function(mediaType, id, viewable) {
-
-		var rtnStr = "";
-
-		if(mediaType.toLowerCase() === "flash") {
-			rtnStr = "<img data-viewable='"+ viewable +"' id='"+ id +"' src='imgs/flash.png'>";
-		}else if(mediaType.toLowerCase() === "html") {
-			rtnStr = "<img src='imgs/HTML5.png'>";
-		}else if(mediaType.toLowerCase() === "pdf") {
-			rtnStr = "<img src='imgs/pdf.png'>";
-		}
-		return new Handlebars.SafeString(rtnStr);
-
-	});
-
-
-
-	Handlebars.registerHelper('mediaItemsRows', function(items, options) {
-		var out = "";
-
-		for (var i = 0, l = items.length; i < l; i++) {
-			out = out + '<tr>';
-			out = out + '<td>' + items[i].resource_type + '</td>';
-			out = out + '<td>' + items[i].mediaType + '</td>';
-			out = out + '<td>' + items[i].display_title + '</td>';
-			out = out + '<td>' + items[i].language + '</td>';
-			out = out + '</tr>';
-		}
-
-		return out;
-	});
-
-
 
 	//Handlebars helpers
 	//https://gist.github.com/1468937

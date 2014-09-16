@@ -4,7 +4,7 @@ define(function (require) {
 	var Backbone = require("backbone");
 	require('backbone.stickit');
 	require('backbone-deep-model');
-	require('bootstrap');
+	//require('bootstrap');
 	require("marionette");
 	var Handlebars = require('handlebars');
 	var JST = require("jst");
